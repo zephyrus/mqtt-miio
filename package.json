@@ -1,0 +1,42 @@
+{
+	"name": "mqtt-miio",
+	"version": "0.0.1",
+
+	"description": "MQTT integration for miio devices",
+	"author": "zephyrus",
+
+	"license": "MIT",
+
+	"homepage": "https://github.com/zephyrus/mqtt-miio",
+
+	"bugs": {
+		"url": "https://github.com/zephyrus/mqtt-miio/issues"
+	},
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zephyrus/mqtt-miio.git"
+	},
+
+	"keywords": [
+		"mqtt",
+		"miio"
+	],
+
+	"scripts": {
+		"lint": "eslint .",
+		"start": "node index.js"
+	},
+
+	"dependencies": {
+		"mqtt": "4.1.0",
+		"miio": "0.15.6",
+		"lodash": "4.17.15"
+	},
+
+	"devDependencies": {
+		"eslint": "6.8.0",
+		"eslint-plugin-import": "2.20.2",
+		"eslint-config-airbnb-base": "14.1.0"
+	}
+}
