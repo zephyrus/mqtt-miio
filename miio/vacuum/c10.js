@@ -1,4 +1,4 @@
-const { Vacuum } = require('./vacuum');
+const Vacuum = require('./vacuum');
 
 module.exports = class RoborockC10 extends Vacuum {
 

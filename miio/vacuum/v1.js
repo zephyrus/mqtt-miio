@@ -1,4 +1,4 @@
-const { Vacuum } = require('./vacuum');
+const Vacuum = require('./vacuum');
 
 module.exports = class XiaomiVacuum extends Vacuum {
 
