@@ -1,0 +1,7 @@
+MQTT_ID='mqtt-miio'
+MQTT_PATH='miio'
+MQTT_HOST='http://<mqtt ip>'
+MQTT_USERNAME='<mqtt username>'
+MQTT_PASSWORD='<mqtt password>'
+DEVICE_<id 1>='<miio device token 1>'
+DEVICE_<id 2>='<miio device token 2>'

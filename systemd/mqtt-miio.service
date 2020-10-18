@@ -1,0 +1,15 @@
+[Unit]
+Description=mqtt-miio
+After=network.target
+
+[Service]
+EnvironmentFile=/opt/mqtt-miio/systemd/environment
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/opt/mqtt-miio
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=mqttmiio
+
+[Install]
+WantedBy=multi-user.target
