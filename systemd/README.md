@@ -6,10 +6,11 @@ As user `root`:
 ```
 useradd  --system  --home-dir /opt/mqtt-miio  mqttmiio
 mkdir  -p  /opt
-chmod 755 /opt
+chmod  755  /opt
 git  -C /opt  clone  https://github.com/zephyrus/mqtt-miio.git
 cd  /opt/mqtt-miio
 npm  install
+cp  systemd/environment.dist  systemd/environment
 systemctl  enable  /opt/mqtt-miio/systemd/mqtt-miio.service
 ```
 
