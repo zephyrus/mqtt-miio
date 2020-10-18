@@ -1,4 +1,4 @@
-# Use MQTT-MIIO with SystemD
+# Using MQTT-MIIO with SystemD
 Instead of using [Docker](https://github.com/zephyrus/mqtt-miio/blob/master/README.md)
 
 ## Install
