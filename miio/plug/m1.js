@@ -1,3 +1,5 @@
+// https://github.com/marcelrv/openhab2/blob/miio-plughmi/bundles/org.openhab.binding.miio/src/main/resources/database/chuangmi.plug.m1.json
+
 const Plug = require('./plug');
 
 module.exports = class ChuangmiPlugM1 extends Plug {
@@ -7,7 +9,7 @@ module.exports = class ChuangmiPlugM1 extends Plug {
 	}
 
 	model() {
-		return 'M1';
+		return 'chuangmi.plug.m1';
 	}
 
 	properties() {
@@ -15,7 +17,7 @@ module.exports = class ChuangmiPlugM1 extends Plug {
 			power: {
 				get: {
 					key: 'power',
-					parse: (value) => value === 'on',
+					parse: (value) => (value === 'on' || value === true),
 				},
 
 				set: {
@@ -29,6 +31,17 @@ module.exports = class ChuangmiPlugM1 extends Plug {
 					key: 'temperature',
 				},
 			},
+
+			wifi_led: {
+				get: {
+					key: 'wifi_led',
+				},
+
+                                set: {
+                                        key: 'set_wifi_led',
+                                        parse: (value) => (value ? 'on' : 'off'),
+                                },			
+			}
 		};
 	}
 

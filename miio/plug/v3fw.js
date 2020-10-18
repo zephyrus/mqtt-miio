@@ -1,15 +1,15 @@
-// https://github.com/marcelrv/openhab2/blob/miio-plughmi/bundles/org.openhab.binding.miio/src/main/resources/database/chuangmi.plug.v3.json
+// https://github.com/marcelrv/openhab2/blob/miio-plughmi/bundles/org.openhab.binding.miio/src/main/resources/database/chuangmi.plug.v3fw.json
 
 const Plug = require('./plug');
 
-module.exports = class ChuangmiPlugV3 extends Plug {
+module.exports = class ChuangmiPlugV3FW extends Plug {
 
 	manufacturer() {
 		return 'Xiaomi';
 	}
 
 	model() {
-		return 'chuangmi.plug.v3';
+		return 'chuangmi.plug.v3fw';
 	}
 
 	properties() {
@@ -20,10 +20,10 @@ module.exports = class ChuangmiPlugV3 extends Plug {
 					parse: (value) => (value === 'on' || value === true),
 				},
 
-                                set: (value) => {
-                                        if (value) return { call: 'set_on', args: [] }
-                                        else return { call: 'set_off', args: [] };
-                                },
+				set: {
+					key: 'set_power',
+					parse: (value) => (value ? 'on' : 'off'),
+				},
 			},
 
                         usb_power: {
@@ -42,7 +42,7 @@ module.exports = class ChuangmiPlugV3 extends Plug {
 					key: 'temperature',
 				},
 			},
-			
+
 			wifi_led: {
 				get: {
 					key: 'wifi_led',

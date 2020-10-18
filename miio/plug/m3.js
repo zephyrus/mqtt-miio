@@ -7,7 +7,7 @@ module.exports = class ChuangmiPlugM3 extends ChuangmiPlugM1 {
 	}
 
 	model() {
-		return 'M3';
+		return 'chuangmi.plug.m3';
 	}
 
 };

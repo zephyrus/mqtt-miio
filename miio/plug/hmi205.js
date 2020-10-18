@@ -7,8 +7,7 @@ module.exports = class ChuangmiPlugHmi205 extends ChuangmiPlugM1 {
 	}
 
 	model() {
-		return 'HMI205';
+		return 'chuangmi.plug.hmi205';
 	}
-
 
 };
