@@ -1,6 +1,6 @@
-const Plug = require('./plug');
+const ChuangmiPlugM1 = require('./m1');
 
-module.exports = class ChuangmiPlugHmi206 extends Plug {
+module.exports = class ChuangmiPlugHmi206 extends ChuangmiPlugM1 {
 
 	manufacturer() {
 		return 'Xiaomi';

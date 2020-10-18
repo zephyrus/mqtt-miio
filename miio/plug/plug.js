@@ -21,25 +21,4 @@ module.exports = class Plug extends Device {
 		]);
 	}
 
-	properties() {
-		return {
-			power: {
-				get: {
-					key: 'power',
-					parse: (value) => value === 'on',
-				},
-
-				set: {
-					key: 'set_power',
-					parse: (value) => (value ? 'on' : 'off'),
-				},
-			},
-			temperature: {
-				get: {
-					key: 'temperature',
-				},
-			},
-		};
-	}
-
 };
