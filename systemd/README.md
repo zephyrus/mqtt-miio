@@ -1,5 +1,5 @@
 # Use MQTT-MIIO with SystemD
-Instead of Docker
+Instead of using [Docker](https://github.com/zephyrus/mqtt-miio/blob/master/README.md)
 
 ## Install
 As user `root`:
@@ -15,9 +15,10 @@ systemctl  enable  /opt/mqtt-miio/systemd/mqtt-miio.service
 
 ## Configure
 Edit the file `/opt/mqtt-miio/systemd/environment`
+
 If the service is already running, you need to restart it to apply the changes: `systemctl restart mqtt-miio.service`
 
-If you need to specify a token and you need the device ID:
+If you need to specify a token and you need the device id:
 - `systemctl start mqtt-miio.service`
 - plug in the device
 - check log: `journalctl -eu mqtt-miio`
