@@ -30,8 +30,7 @@ module.exports = class ChuangmiPlugHmi208 extends Plug {
                                         parse: (value) => value === 'on',
                                 },
 
-                                set: {
-                                        key: 'set_usb_on',
+                                set: (value) => {
 					if (value === 'on') return { call: 'set_usb_on', args: [] };
                                         if (value === 'off') return { call: 'set_usb_off', args: [] };
                                 },
