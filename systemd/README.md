@@ -13,9 +13,9 @@ apt-get  install  nodejs git
 ## Install
 As user `root`:
 ```
-useradd  --system  --home-dir /opt/mqtt-miio  mqttmiio
 mkdir  -p  /opt
 chmod  755  /opt
+adduser  --system  --home /opt/mqtt-miio  mqttmiio
 git  -C /opt  clone  https://github.com/zephyrus/mqtt-miio.git
 cd  /opt/mqtt-miio
 npm  install
