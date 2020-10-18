@@ -1,6 +1,15 @@
 # Using MQTT-MIIO with SystemD
 Instead of using [Docker](https://github.com/zephyrus/mqtt-miio/blob/master/README.md)
 
+## Requirements
+- NodeJS
+- Git
+- SystemD
+### Debian / Ubuntu
+```
+apt-get  install  nodejs git
+```
+
 ## Install
 As user `root`:
 ```
