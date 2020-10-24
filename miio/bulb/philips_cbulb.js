@@ -43,8 +43,7 @@ module.exports = class PhilipsLightCbulb extends Bulb {
                                 },
 			},
 
-			cct: {
-			        // Correlated Color Temperature
+			color_temperature: {
 				get: {
 					key: 'cct',
 				},
@@ -66,8 +65,7 @@ module.exports = class PhilipsLightCbulb extends Bulb {
                                 },			
 			},
 
-                        cid: {
-                                // Color
+                        color: {
                                 get: {
                                         key: 'cid',
                                 },
