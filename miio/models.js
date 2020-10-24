@@ -13,4 +13,7 @@ module.exports = {
 	"roborock.vacuum.e2": require('./vacuum/v1'),
 	"roborock.vacuum.s4": require('./vacuum/v1'),
 	"roborock.vacuum.a10": require('./vacuum/v1'),
+
+	// light bulbs
+	'philips.light.cbulb': require('./bulb/philips_cbulb')
 };
